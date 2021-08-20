@@ -13,7 +13,7 @@ class ExportController {
     public function index($type, $format)
     {
         $data = [];
-        if ($type === 'playerStats') {
+        if ($type === 'playerstats') {
             $data = GetPlayerStats::execute(args(['player', 'playerId', 'team', 'position', 'country']));
         } else if ($type === 'players') {
             $data = GetPlayers::execute(args(['player', 'playerId', 'team', 'position', 'country']));
